@@ -43,8 +43,12 @@ class HomeController extends Controller
         'Descripcion'=>'required|min:15'];
         // se separan las reglas de validacion de cada campo con un signo de |
 
-        // se envia a la funcion validate los campos realizados por el formulario post contra las reglas de validacion
-        $this->validate($request,$rules);
+        /* se envia a la funcion validate los campos realizados por el formulario post contra las reglas de validacion, la variable $mensaje se pasa con la uncion validate nos permite hacer mensajes personalizados para cada validador*/
+        $messages=[
+        'category_id.exists'=>'La Categoria seleccionada no existe en nuestra base de datos.',
+        'tittle.required'=>'no ha ingresado un titulo para la incidencia.',
+        'Descripcion.required'=>'la descripcion debe ser al menos 15 caracteres.'];
+        $this->validate($request,$rules,$messages);
 
         //Incident::create();
 
