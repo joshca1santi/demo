@@ -7,9 +7,21 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function index(){
-
-
-    	return "ruta /usuarios resuelta por UserController";
+   
+    public function __construct()
+    {
+        $this->middleware('admin');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {   
+        return view('users');
+    }
+
+    
 }
