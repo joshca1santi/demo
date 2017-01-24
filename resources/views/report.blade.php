@@ -9,7 +9,7 @@
                     {{csrf_field()}}
                         <div class="form-group">
                             
-                            <label for="category_id">Categoria</label>
+                            <label for="category_id">Categorias</label>
                             <select name="category_id" class="form-control">
                             <option value="0">General</option>
                            @foreach($categories as $category)
