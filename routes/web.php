@@ -13,13 +13,20 @@
 
 Route::get('/', function () {
     return view('welcome');
+
+
+
 });
+
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/reportar', 'HomeController@getReport');
 Route::post('/reportar', 'HomeController@postReport');
+Route::get('/administracion', 'HomeController@getAdministration');
 
 
 Route::group(['middleware'=>'admin','namespace'=>'Admin'],function(){

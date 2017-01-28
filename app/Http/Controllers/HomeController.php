@@ -27,6 +27,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function getAdministration()
+    {   
+        return view('administration');
+    }
+
      public function getReport()
     {
         // $categories=$project->categories;
