@@ -12,7 +12,7 @@
   			<img src="img/logo-fonbe-small.png" class="img-responsive" alt="">
   		</div>
   		<div class="col-sm-9 visible-xs visible-sm">
-  			<h1>Sigecubo <small> v.0.0.1</small></h1>
+  			<h1>SISTEMA SIN NOMBRE <small> v.0.0.1</small></h1>
   		</div>
   	</div>
     
